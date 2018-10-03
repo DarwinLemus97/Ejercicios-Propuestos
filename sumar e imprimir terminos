@@ -26,8 +26,8 @@ public class SumaEImprimirTerminos {
                  suma = suma + 2;
                  sumatotal = sumatotal + suma;
             }
-            
-             System.out.print("\nLa suma total es: "+sumatotal +2+"\n\n");
+            sumatotal = sumatotal +2;
+             System.out.print("\nLa suma total es: "+sumatotal+"\n\n");
               
               
               
