@@ -1,0 +1,40 @@
+//Escriba un algoritmo que obtenga la suma e imprima además los términos de la siguiente
+//serie:2, 5, 7, 10, 12, 15, 17, ..., 1800
+
+package sumaeimprimirterminos;
+
+/**
+ *
+ * @author darwinlemus
+ */
+public class SumaEImprimirTerminos {
+
+    
+    public static void main(String[] args) {
+      
+            int suma = 2;
+            int sumatotal = 0;
+            
+            while(suma <= 1800){
+            
+                System.out.print(suma+"\n");
+                suma = suma +3;
+                
+                sumatotal = sumatotal + suma;
+                 System.out.print(suma+"\n");
+                 
+                 suma = suma + 2;
+                 sumatotal = sumatotal + suma;
+            }
+            
+             System.out.print("\nLa suma total es: "+sumatotal +2+"\n\n");
+              
+              
+              
+        
+       
+        
+        
+    }
+    
+}
