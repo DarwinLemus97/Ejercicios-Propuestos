@@ -1,0 +1,91 @@
+//4. Una tienda ha puesto en oferta la venta de un producto, ofreciendo 15% de descuento por la
+//compra de 3 docenas y 10% en caso contrario. Además por la compra de más de 3 docenas se
+//obsequia una unidad por cada docena en exceso sobre 3. Diseñe un programa que determine
+//el monto de la compra, el monto de descuento y el número de unidades de obsequio para
+//cada uno de los 10 clientes que se atendieron en el día.
+
+package ofertadetienda;
+    import java.util.Scanner;
+/**
+ *
+ * @author darwinlemus
+ */
+public class OfertaDetienda {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+
+                Scanner leer = new Scanner(System.in);
+                
+            int docenas, cliente=10;
+            double docenasConv=0, unidad, descuento, descuentoFinal=0;
+            
+                System.out.println("Los clientes que se atenderan");
+                System.out.println("Venta de camisas por mayoreo(Docenas)");
+                System.out.println("Precio por camisa $10.50");
+                System.out.println("Cuantas docenas que desea comprar: ");
+                docenas = leer.nextInt();
+            
+            if(docenas ==3){
+                
+                docenasConv = docenas * 12;
+                
+                unidad = docenasConv * 10.50;
+                
+                descuento = unidad * 0.15;
+                
+                descuentoFinal = unidad - descuento;
+                
+                System.out.println("Ha adquirido 3 docenas");
+                System.out.println("Lo cual se le hara un descuento del 15%");
+                System.out.println("Precio normal por  "+docenas+" docenas es: "+unidad);
+                System.out.println("Descuento: "+descuento);
+                System.out.println("Total a pagar en "+docenas+" docenas es: "+descuentoFinal);
+            
+            }
+            
+            if(docenas < 3){
+            
+                docenasConv = docenas * 12;
+                
+                unidad = docenasConv * 10.50;
+                
+                descuento = unidad * 0.10;
+                
+                descuentoFinal = unidad - descuento;
+                
+                System.out.println("Ha adquirido menos de 3 docenas");
+                System.out.println("Lo cual se le hara un descuento del 10%");
+                System.out.println("Precio normal por  "+docenas+" docenas es: "+unidad);
+                System.out.println("Descuento: "+descuento);
+                System.out.println("Total a pagar en "+docenas+" docenas es: "+descuentoFinal);
+            
+            
+            }
+            
+            if(docenas >3){
+            
+                docenasConv = docenas * 12 + docenas * 1;
+                
+                unidad = docenasConv * 10.50;
+                
+                descuento = unidad * 0.10;
+                
+                descuentoFinal = unidad - descuento;
+                              
+                System.out.println("Ha adquirido mas de 3 docenas");
+                System.out.println("Lo cual se le hara un descuento del 10%");
+                System.out.println("Precio normal por las "+docenas+" docenas es: "+unidad);
+                System.out.println("Descuento: "+descuento);
+                System.out.println("Total a pagar en "+docenas+" docenas es: "+descuentoFinal);
+                System.out.println("Por oferta de haber adquirido mas de 3 docenas se le obsequiara una unidad por docena");
+                System.out.println("por lo cual llevara en total de "+docenas * 1+" unidades adicionales");
+                System.out.println("a las "+docenas+" docenas que pidio, en total llevara "+docenasConv+" unidades");
+           
+                         }
+            
+    }
+    
+}
