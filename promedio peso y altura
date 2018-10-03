@@ -1,0 +1,72 @@
+//3. Diseñe un algoritmo que dados el peso y la altura de N personas que pertenecen a un
+//departamento de la república; obtenga el promedio del peso y de la altura de esta población.
+
+package pesoaltura;
+        import java.util.Scanner;
+/**
+ *
+ * @author darwinlemus
+ */
+public class PesoAltura {
+
+    public static void main(String[] args) {
+        
+        Scanner lector = new Scanner(System.in);
+        
+        int nPersonas;
+        float peso, altura;
+        float peso_persona=0, altura_persona=0, cantidad_personas=0;
+        float promedio_peso=0, promedio_altura=0;
+                
+        while(true){
+            
+            System.out.println("Ingrese la cantidad de personas a evaluar");
+            nPersonas = lector.nextInt();
+            
+            if(nPersonas > 0){
+                
+            
+                for(int i=1; i<= nPersonas; i++){
+                 
+                        System.out.println("Ingrese peso en lb: ");
+                        peso = lector.nextFloat();
+                        System.out.println("Ingrese altura en m:");
+                        altura = lector.nextFloat();
+                        
+                        peso_persona += peso;
+                        altura_persona += altura;
+                        
+                        cantidad_personas++;
+                }
+                  
+                  
+                  if(cantidad_personas >0){
+                      
+                      promedio_peso = peso_persona / cantidad_personas;
+                      promedio_altura = altura_persona / cantidad_personas;
+                      
+                      
+                  
+                  }
+                  
+                  System.out.println("Promedio del peso de las personas es: "+promedio_peso+" Kg");
+                  System.out.println("\nPromedio de la altura de las personas es: "+promedio_altura+" m");
+                
+                   {break;}
+
+                  
+            }else{
+            
+                System.out.println("El numero ingresado incorrecto");
+            }
+            
+            
+            
+        }
+        
+        
+        
+        
+    }
+    
+}
